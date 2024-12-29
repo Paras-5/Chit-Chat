@@ -3,10 +3,15 @@ import "./MyStyle.css";
 import logo from "../Images/chat.png";
 import { IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import {AnimatePresence, motion} from "framer-motion";
 
 const Groups = () => {
   return (
-    <div className="list-container">
+    <AnimatePresence>
+    <motion.div initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} exit={{opacity:0,scale:0}} transition={{
+      ease:"anticipate",
+      duration:"0.3"
+    }} className="list-container">
       <div className="ug-header">
         <img src={logo} style={{ height: "2rem", width: "2rem" }} />
         <p className="ug-title">Online Groups</p>
@@ -18,40 +23,41 @@ const Groups = () => {
         <input placeholder="Search" className="search-box"></input>
       </div>
       <div className="ug-list">
-        <div className="list-item">
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
-        <div className="list-item">
+        </motion.div>
+        <motion.div whileHover={{scale:1.01}} whileTap={{scale:0.98}} className="list-item">
           <p className="con-icon">T</p>
           <p className="con-title">Test Group</p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 };
 
